@@ -41,11 +41,11 @@ if (toastTrigger) {
 	})
 }
 // read more text
-let coll = document.querySelectorAll('[data-ql-target]')
+let coll = document.querySelectorAll('[data-qela-target]')
 for (let i = 0; i < coll.length; i++) {
 	coll[i].addEventListener('click', function () {
 		let self = event.currentTarget;
-		let valueAtribute = self.getAttribute('data-ql-target');
+		let valueAtribute = self.getAttribute('data-qela-target');
 		let content = document.querySelector(`.qela-description[id="${valueAtribute}"]`);
 		content.classList.toggle('active');
 		this.classList.toggle('active');
