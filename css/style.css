@@ -13090,6 +13090,7 @@ body {
 
 .btn-sm, .btn-group-sm > .btn {
   gap: 2px;
+  font-weight: 400;
 }
 .btn-sm[class^=ic-]:before, .btn-group-sm > [class^=ic-].btn:before, .btn-sm[class*=ic-]:before, .btn-group-sm > [class*=ic-].btn:before {
   font-size: 14px;
@@ -13133,8 +13134,8 @@ body {
 }
 
 .btn-danger {
-  border-color: #fff4f5;
-  background-color: #fff4f5;
+  border-color: #ffe9ea;
+  background-color: #ffe9ea;
   color: #ff453a;
 }
 .btn-danger:hover {
@@ -13143,9 +13144,9 @@ body {
   color: #ff453a;
 }
 .btn-danger:active {
-  color: #ff453a !important;
-  border-color: #ffe9ea !important;
-  background-color: #ffe9ea !important;
+  color: #cc372e !important;
+  border-color: #ffb5b0 !important;
+  background-color: #ffb5b0 !important;
 }
 
 .btn-warning {
@@ -14576,20 +14577,25 @@ input::-webkit-inner-spin-button {
   letter-spacing: 0.2px;
   border-width: 1px;
   border-style: solid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .qela-alert.alert span[class*=ic-] {
   position: absolute;
-  left: 16px;
+  left: 1rem;
   top: 1rem;
 }
 .qela-alert.alert span[class*=ic-]::before {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .qela-alert.alert a {
   text-decoration: none;
 }
 .qela-alert.custom {
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 .qela-alert.custom.alert-secondary {
   border-color: transparent;
@@ -14600,6 +14606,21 @@ input::-webkit-inner-spin-button {
 }
 .qela-alert.custom span[class*=ic-]::before {
   font-size: 38px;
+}
+.qela-alert.column {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.qela-alert.column > div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qela-alert.column > div span[class*=ic-] {
+  position: static;
 }
 .qela-alert.alert-secondary {
   background-color: #f4f3ff;
@@ -14622,18 +14643,26 @@ input::-webkit-inner-spin-button {
   border-color: #79d891;
 }
 .qela-alert.small {
-  padding: 0.5rem 2.25rem;
+  padding: 0.5rem 2rem;
 }
 .qela-alert.small span[class^=ic-],
 .qela-alert.small span [class*=ic-] {
   left: 12px;
   top: 0.5rem;
 }
+.qela-alert.small .btn-close {
+  top: 0.5rem;
+  right: 0.5rem;
+}
 .qela-alert .btn-close {
   position: absolute;
   top: 16px;
   right: 16px;
+  font-size: 1rem;
   opacity: 1;
+}
+.qela-alert .btn-close.small {
+  padding: 0;
 }
 
 .dropdown > .btn::before {
