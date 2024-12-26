@@ -14533,6 +14533,9 @@ main {
   flex-wrap: wrap;
 }
 
+.form-control {
+  --input-number-width: 56px;
+}
 @media (any-hover: hover) {
   .form-control:hover {
     border-color: #9188ff;
@@ -17360,10 +17363,11 @@ input::-webkit-inner-spin-button {
   height: var(--img-size);
   flex: 0 0 var(--img-size);
   border-radius: 50%;
+  border: 1px solid #e9ecef;
+  background-color: #fff;
 }
 .qela-avatar img {
   border-radius: 50%;
-  border: var(--bs-border-width) solid #e9ecef;
 }
 .qela-avatar.online, .qela-avatar.online-sm {
   position: relative;
